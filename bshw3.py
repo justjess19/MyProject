@@ -21,7 +21,7 @@ link = soup.find_all('img')
 for a in link:
 	href = a['src']
 	if (href) == 'https://testbed.files.wordpress.com/2012/09/bsi_exposition_041316_192.jpg':
-		a['src'] = "http://gupshupcorner.net/wp-content/uploads/2015/01/Cute-Baby-HD-Wallpaper13.jpg"
+		a['src'] = "https://s-media-cache-ak0.pinimg.com/originals/6b/35/eb/6b35ebd66c3e5a1ba0259b7bd04f87db.jpg"
 
 for a in link:
 	href = a['src']
