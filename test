@@ -1,0 +1,4 @@
+hours = input(“hours”) 
+rate = input(“rate per hour”) 
+gross_pay = (hours* rate)
+print gross pay 
