@@ -1,12 +1,12 @@
-#bshw3.py
+#bshw3.py by Jessica Stuart
 
 import requests
 from bs4 import BeautifulSoup
 import re
 
-base_url = "http://www.si.umich.edu/programs/bachelor-science-information/bsi-admissions"
+base_url = "http://collemc.people.si.umich.edu/data/bshw3StarterFile.html"
 r = requests.get(base_url)
-soup = BeautifulSoup(r.text, "lxml")
+soup = BeautifulSoup(r.text, "html.parser")
 
 words = soup.find_all('p')
 for elt in words:
@@ -22,7 +22,6 @@ for a in link:
 	href = a['src']
 	if (href) == 'https://testbed.files.wordpress.com/2012/09/bsi_exposition_041316_192.jpg':
 		a['src'] = "https://s-media-cache-ak0.pinimg.com/originals/6b/35/eb/6b35ebd66c3e5a1ba0259b7bd04f87db.jpg"
-
 for a in link:
 	href = a['src']
 	if not href.startswith("http:"):
